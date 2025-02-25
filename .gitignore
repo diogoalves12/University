@@ -4,4 +4,6 @@ out/
 .DS_Store
 Prog/build
 Prog/CMakeLists.txt
+cmake-build-debug
+
 
