@@ -5,5 +5,4 @@ out/
 Prog/build
 Prog/CMakeLists.txt
 cmake-build-debug
-
-
+.vscode/
