@@ -2,5 +2,5 @@
 out/
 *.iml
 .DS_Store
-cmake-build-debug
+Prog/build
 
