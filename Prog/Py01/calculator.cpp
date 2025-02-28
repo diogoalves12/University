@@ -1,7 +1,7 @@
 #include <iostream>
 
 int main(){
-  int a,b;
+  float a,b;
   char operation;
   std::cin >> a >> operation >> b;
 
@@ -17,7 +17,7 @@ int main(){
       break;
     case '/':
       if(b == 0) {
-        std::cout << "invalid operand: divisor cannot be" << std::endl;
+        std::cout << "invalid operand: divisor cannot be 0" << std::endl;
         break;
       }
       std::cout << a / b << std::endl;
