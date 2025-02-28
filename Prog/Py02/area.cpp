@@ -8,7 +8,7 @@ int area(int base, int height){
 int area(int a, int b, int c){
   double s = (a + b + c) / 2.0;
   double A = sqrt(s * (s- a) * (s - b) * (s - c));
-  return round(A);
+  return round(A)
 }
 
 int main(){
