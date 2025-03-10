@@ -16,13 +16,6 @@ double norm(const complex& c){
   return sqrt((c.x * c.x) + (c.y * c.y));
 }
 
-std::ostream& operator<<(std::ostream& out, const complex& c) {
-  return out << std::fixed << std::setprecision(3)
-             << c.x
-             << (c.y >= 0.0 ? "+" : "")
-             << c.y << "i";
-}
-
 int main() {
   complex a = { 0, 1 }, b = { 2, 1 }, s, m;
   add(a, b, s);
