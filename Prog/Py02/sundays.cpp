@@ -5,25 +5,14 @@ bool leap(int year) {
 }
 
 int sundays(int year) {
-    int days_in_month[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-    int day_of_week = 0;
-    int sunday_count = 0;
+  int totalDays = 0;
+  for(int i = 1900; i <= year; i++){
+    if(leap(i)) totalDays  += 366;
+    else totalDays += 365;
+  }
+  totalDays /= 7;
+  return totalDays;
 
-    for (int y = 1900; y <= year; ++y) {
-        for (int m = 0; m < 12; ++m) {
-            if (day_of_week == 6) {
-                ++sunday_count;
-            }
-
-            if (m == 1 && leap(y)) {
-                day_of_week = (day_of_week + 29) % 7;
-            } else {
-                day_of_week = (day_of_week + days_in_month[m]) % 7;
-            }
-        }
-    }
-
-    return sunday_count;
 }
 
 int main() {
