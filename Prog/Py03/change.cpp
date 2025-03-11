@@ -3,11 +3,16 @@
 amount change(amount given, amount price){
   amount change;
 
-  change.euros = given.euros - price.euros;
-  if(change.euros < 0) change.euros = 0;
+  int totalGiven;
+  totalGiven = given.euros * 100 + given.cents;
 
-  change.cents = given.cents - price.cents;
-  if(change.cents < 0) change.cents = 0;
+  int totalPrice;
+  totalPrice = price.euros * 100 + price.cents;
+
+  change.euros = totalGiven - totalPrice;
+  change.cents = change.euros % 100;
+  change.euros /= 100;
+
 
   return change;
 }
